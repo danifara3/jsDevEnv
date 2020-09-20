@@ -1,4 +1,5 @@
 # editorconfig.org
+#for configuring vs code
 root =true
 
 [*]

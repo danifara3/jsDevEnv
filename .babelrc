@@ -1,0 +1,6 @@
+//this ensures that the lastest js features can be used  "latest"
+{
+  "presets": [
+    "latest"
+  ]
+}
