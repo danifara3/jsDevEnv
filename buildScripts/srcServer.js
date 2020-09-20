@@ -2,6 +2,7 @@
 // var path = require('path');
 // var open = require('open');
 
+//server setup and others
 //we can used import cos of babel
 //it transpil the latest feature to es5 or es6
 import express from 'express';

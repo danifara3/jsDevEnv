@@ -1,5 +1,6 @@
 //this file is not transpiled so must used commonJS and ES5
-//this is called in the package .json file for running unit test
+//this file is called in the package .json file for running unit test
+// using mocha, jsdom for showing in console for speed
 
 //Register babel to transpile before our test run.
 require('babel-register')();
