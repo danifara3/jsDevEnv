@@ -1,8 +1,12 @@
+"prestart-mockapi": "npm run generate-mock-data",  //for package.json
+
+
+
 # Test against this version of node.js
 # version: 1.0.{build}
 # build:
 #   verbosity: minimal
-  
+
 environment:
   #matrix:
     # node.js
@@ -26,6 +30,6 @@ environment:
 
     # Don't actually build
     build: off
-    
-    
+
+
 
