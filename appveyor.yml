@@ -1,7 +1,8 @@
+#NOTE: yml is sensitive to spacing can be a major cause of issue
 # Test against the latest version of this Node.js version
 environment:
-
-  nodejs_version: "6"
+  matrix:
+  - nodejs_version: "6"
 
 # Install scripts. (runs after repo cloning)
 install:
