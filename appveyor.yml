@@ -8,12 +8,12 @@ environment:
     # node.js
     - nodejs_version: "6"
 
-    # Install scripts. (run after repo cloning)
-    install: install-product node $env:nodejs_version
-      #Get the latest stable version of Node.js or io.js
-      #- ps: 
-      # install modules
-      - npm install
+#     # Install scripts. (run after repo cloning)
+#     install: 
+#       #Get the latest stable version of Node.js or io.js
+#       - ps install-product node $env:nodejs_version
+#       # install modules
+#       - npm install
 
     # Post-install test script.
     test_script:
