@@ -14,7 +14,7 @@ environment:
     # Post-install test script.
     test_script:
        # Output useful info for debugging.
-      - node --nodejs_version
+      - node --version
       - npm --version
 
        # run tests
