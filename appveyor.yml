@@ -1,19 +1,19 @@
 # Test against this version of node.js
-version: 1.0.{build}
-build:
-  verbosity: minimal
+# version: 1.0.{build}
+# build:
+#   verbosity: minimal
   
 environment:
-  matrix:
+  #matrix:
     # node.js
     - nodejs_version: "6"
 
-#     # Install scripts. (run after repo cloning)
-#     install: 
-#       #Get the latest stable version of Node.js or io.js
-#       - ps install-product node $env:nodejs_version
-#       # install modules
-#       - npm install
+    # Install scripts. (run after repo cloning)
+    install: 
+      #Get the latest stable version of Node.js or io.js
+      - ps: Install-Product node $env:nodejs_version
+      # install modules
+      - npm install
 
     # Post-install test script.
     test_script:
