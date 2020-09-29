@@ -1,7 +1,16 @@
 body{
   font-family: sans-serif;
+  margin: 5%;
+}
+
+table{
+  display: -moz-inline-grid;
 }
 
 table th{
+
   padding: 5px;
+  width: 25%;
+
 }
+

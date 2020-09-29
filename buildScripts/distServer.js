@@ -8,26 +8,23 @@
 import express from 'express';
 import path from 'path';
 import open from 'open';
+import compression from 'compression';
+// webpack removed
 
-//for webpack after it has been configured
-import webpack from 'webpack';
-import config from '../webpack.config.dev';
 
 /* eslint-disable no-console */
 
 const port= 3000;
 const app = express();
+//compiler removed
 
-//compiler and app.use also for webpack
-const compiler = webpack(config);
+app.use(compression());
+//express get this from dist directory
+app.use(express.static('dist'));
 
-app.use(require('webpack-dev-middleware')(compiler, {
-  noinfo: true,
-  publicPath: config.output.publicPath
-}));
-
+// pages server frpm dist folder
 app.get('/',function(req, res){
-  res.sendFile(path.join(__dirname,'../src/index.html'));
+  res.sendFile(path.join(__dirname,'../dist/index.html'));
 });
 
 app.get('/users', function(req, res){
@@ -35,9 +32,7 @@ app.get('/users', function(req, res){
   res.json([
     {"id": 1,"firstName":"Bob","lastName":"Smith","email":"bob@mail.com"},
     {"id": 2,"firstName":"Tammy","lastName":"Norton","email":"tammy@mail.com"},
-    {"id": 3,"firstName":"Tina","lastName":"Lee","email":"tina@mail.com"},
-    {"id": 4,"firstName":"Tamy","lastName":"Norton","email":"tammy@mail.com"},
-    {"id": 5,"firstName":"Tia","lastName":"Lee","email":"tina@mail.com"}
+    {"id": 3,"firstName":"Tina","lastName":"Lee","email":"tina@mail.com"}
   ]);
 });
 
